@@ -34,7 +34,9 @@ const About = () => {
                         <li className='text-black font-bold'>Freelance:<span className='text-gray-500 font-normal'> Available</span></li>
                     </ul>
                 </div>
-                <button className='bg-black text-white px-5 py-3 my-10'>Download CV</button>
+                <a href="assets/presonal-branding.pdf" download="assets/presonal-branding.pdf" target='_blank'>
+                    <button type="button" className="bg-black text-white my-10 px-4 py-2">Download CV</button>
+                </a>
             </div>
             <div className="bg-white px-10 lg:px-20 py-10 flex flex-col md:flex-row justify-start md:justify-between md:items-center md:space-y-0 md:space-x-10">
                 <div className="w-full md:w-2/4 space-y-4">
