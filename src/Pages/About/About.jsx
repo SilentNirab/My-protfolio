@@ -1,6 +1,13 @@
 import ProgressBar from '@ramonak/react-progress-bar';
 import image from '../../assets/images/developer.png'
+import resume from '../../assets/Md.Nirab-resume.pdf'
+import { useState } from 'react';
 const About = () => {
+    const [loader, setLoader] = useState(false)
+    if (loader) {
+        setLoader(true)
+        return <span className="loading loading-ring loading-lg"></span>
+    }
     return (
         <div className='pt-20 md:pt-10'>
             <div className="px-10 lg:px-20">
@@ -34,7 +41,7 @@ const About = () => {
                         <li className='text-black font-bold'>Freelance:<span className='text-gray-500 font-normal'> Available</span></li>
                     </ul>
                 </div>
-                <a href="assets/presonal-branding.pdf" download="assets/presonal-branding.pdf" target='_blank'>
+                <a href={resume} download="resume">
                     <button type="button" className="bg-black text-white my-10 px-4 py-2">Download CV</button>
                 </a>
             </div>
